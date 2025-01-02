@@ -50,10 +50,17 @@ def main():
     for item in updatable:
       item.update(dt)
 
+    # check collision with player
     for asteroid in asteroids:
       if player.collision(asteroid):
         print("Game Over")
         return
+    # check collision: bullets to asteroids
+    for asteroid in asteroids:
+      for bullet in shots:
+        if bullet.collision(asteroid):
+          asteroid.kill()
+          bullet.kill()
 
     # fill the screen with a black background
     screen.fill((0, 0, 0))
