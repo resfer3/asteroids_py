@@ -1,5 +1,6 @@
 # Asteroids_py
-Basic implementation of Asteroids with python
+Basic implementation of Asteroids with python.
+
 Python and pygame need to be installed:
 ```
 Run:
